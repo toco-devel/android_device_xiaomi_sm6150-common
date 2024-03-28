@@ -196,18 +196,17 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 -vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 -vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor
 
-# Graphics
 # Graphics (Adreno) - from OnePlus 12 - v744
 vendor/gpu/kbc/sequence_manifest.bin|cc050a8058904871b3cfabec74521d42f0a61a1f
 vendor/gpu/kbc/unified_kbcs_32.bin|503228f87adc71131aa8134659b00dffe073e973
 vendor/gpu/kbc/unified_kbcs_64.bin|d63c26959dc02b2efc251953e99dc6e7c32e7f6e
 vendor/gpu/kbc/unified_ksqs.bin|8f77dc004796d58acb959e78f4994c5d6b90baef
 -vendor/lib/egl/eglSubDriverAndroid.so|7df63cb4fb79f0f77457ab306ed3a184a603c703
--vendor/lib/egl/libEGL_adreno.so|df5abdef09c10baeab761024221db4dfa1f72dcf
+-vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|df5abdef09c10baeab761024221db4dfa1f72dcf
 -vendor/lib/egl/libGLESv1_CM_adreno.so|21789f90e8af312acac19d1f60d9fecee474914f
--vendor/lib/egl/libGLESv2_adreno.so|be146b099f3039e36d88227659126d040d6dc8ad
+-vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|be146b099f3039e36d88227659126d040d6dc8ad
 -vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so|6531d78655f091b06ca7910fbbb63471aab7057d
--vendor/lib/egl/libq3dtools_adreno.so|0c2466c3a0cb1a9a1562ecf7920b891eab9383dc
+-vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|0c2466c3a0cb1a9a1562ecf7920b891eab9383dc
 -vendor/lib/egl/libq3dtools_esx.so|f2570e11a3ce6787b041a9af82fdd73badad65dd
 -vendor/lib/libC2D2.so|3950a1fe879b1d06913129578b8276818a5d4157
 -vendor/lib/libCB.so|15b34e00bf2688fbe349f141ec66c983662e3b84
@@ -225,11 +224,11 @@ vendor/gpu/kbc/unified_ksqs.bin|8f77dc004796d58acb959e78f4994c5d6b90baef
 -vendor/lib/libllvm-qcom.so|0fde5945061434d45368ea04f98c3b98f3a25915
 -vendor/lib/libllvm-qgl.so|a7eb9aeed0547ca6781d938a3615673542d21a36
 -vendor/lib64/egl/eglSubDriverAndroid.so|0f0952c0fd67fc091ff4b49dca6bcd39cf25d9cd
--vendor/lib64/egl/libEGL_adreno.so|e4b8982b95b3866b44b12d6890d0c9e0c578558d
+-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|e4b8982b95b3866b44b12d6890d0c9e0c578558d
 -vendor/lib64/egl/libGLESv1_CM_adreno.so|c5e768f1c521bba656c2470def4b4f333ce522be
--vendor/lib64/egl/libGLESv2_adreno.so|a06673511839dd17ea61119fa8b6f935c5f21ba9
+-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|a06673511839dd17ea61119fa8b6f935c5f21ba9
 -vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|5e314c1557dd28f1f3d5cb1b146568ac58874a2f
--vendor/lib64/egl/libq3dtools_adreno.so|c411373b89d73f10385d93f259ec5582d60bed2c
+-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|c411373b89d73f10385d93f259ec5582d60bed2c
 -vendor/lib64/egl/libq3dtools_esx.so|f0aae507e3077b7063a1ccd3639c665492c8792d
 -vendor/lib64/libC2D2.so|a1d2702d17db01d7789227c650fdcae0775a9f8f
 -vendor/lib64/libCB.so|b2eb5a2f4a9c97beb7b44fc36681bb666c129618
