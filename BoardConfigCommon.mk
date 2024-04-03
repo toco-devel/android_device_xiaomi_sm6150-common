@@ -101,7 +101,12 @@ TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1073741824
+BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 92160000
+BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 92160000
 
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
@@ -157,14 +162,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
-# Soong
-SOONG_CONFIG_NAMESPACES += xiaomiSm6150Vars
-SOONG_CONFIG_xiaomiSm6150Vars += \
-    livedisplay_support_anti_flicker \
-    livedisplay_support_sunlight_enhancement
-SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_anti_flicker ?= false
-SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_sunlight_enhancement ?= true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
